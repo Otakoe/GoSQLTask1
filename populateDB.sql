@@ -1,3 +1,4 @@
+truncate table developers;
 insert into developers (name,age,sex) values
 	('Vasya',18,'male'),
     	('Alla',28,'female'),
@@ -7,8 +8,9 @@ insert into developers (name,age,sex) values
     	('Petya',45,'male'),
 	('Gosha',29,'male'),
     	('Nazar',54,'male'),
-    	('Foma',62,'male')
-
+    	('Foma',62,'male');
+        
+truncate table skills;
 insert into skills (skill_name,grade) values 
     ('Java','Middle'),
     ('Java','Senior'),
@@ -16,9 +18,9 @@ insert into skills (skill_name,grade) values
     ('JS','Junior'),
     ('C#','Middle'),
     ('C#','Junior'),
-    ('lua','Middle')
-
-
+    ('lua','Middle');
+    
+truncate table projects;
 insert into projects (project_name,version) values
     ('Minecraft','1.15.2'),
     ('WorldOfWarcraft','8.3'),
@@ -26,25 +28,36 @@ insert into projects (project_name,version) values
     ('Rhinoceros','6.1.18023'),
     ('GroundWar:Tanks','3.4'),
     ('PizzaNinja4','2.3'),
-    ('Android','7.2')
+    ('Android','7.2');
 
-insert into companies (company_name,main_office_city) values
-    ('Blizzard Entertainment','Irwine'),
-    ('Mojang','Stockgolm'),
-    ('Epic Games', 'Cary'),
-    ('McNeel','North america'),
-    ('Garaj Corporation','Berdyansk'),
-    ('Google','Mountain View')
+truncate table cities;
+insert into cities (city_name) values
+    ('Irvine'),
+    ('Stockgolm'),
+    ('Cary'),
+    ('North america'),
+    ('Berdyansk'),
+    ('Mountain View');
+    
+truncate table projects;
+insert into companies (company_name,main_office_city_id) values
+    ('Blizzard Entertainment',1),
+    ('Mojang',2),
+    ('Epic Games',3),
+    ('McNeel',4),
+    ('Garaj Corporation',5),
+    ('Google',6);
 
+truncate table customers;
 insert into customers (customer_name,minage,maxage) values
     ('Other developers',18,50),
     ('All people',null,null),
     ('Schoolchildren',7,16),
     ('Nolife gamers',15,45),
     ('Designers',18,55),
-    ('Workers',18,65)
+    ('Workers',18,65);
 
-
+truncate table link_developers_skills;
 insert into link_developers_skills values
     (1,4),
     (2,1),
@@ -65,8 +78,9 @@ insert into link_developers_skills values
     (8,2),
     (9,7),
     (9,5),
-    (9,2)
+    (9,2);
 
+truncate table link_developers_projects;
 insert into link_developers_projects values
     (1,6),
     (1,5),
@@ -89,8 +103,9 @@ insert into link_developers_projects values
     (8,3),
     (8,7),
     (9,1),
-    (9,2)
+    (9,2);
 
+truncate table link_companies_projects;
 insert into link_companies_projects values
     (1,2),
     (2,1),
@@ -98,8 +113,9 @@ insert into link_companies_projects values
     (4,4),
     (5,5),
     (5,6),
-    (6,7)
+    (6,7);
 
+truncate table link_customers_projects;
 insert into link_customers_projects values
     (1,2),
     (1,3),
@@ -115,4 +131,4 @@ insert into link_customers_projects values
     (5,3),
     (5,2),
     (6,5),
-    (6,6)
+    (6,6);
