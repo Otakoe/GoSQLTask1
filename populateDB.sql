@@ -39,7 +39,7 @@ insert into cities (city_name) values
     ('Berdyansk'),
     ('Mountain View');
     
-truncate table projects;
+truncate table companies;
 insert into companies (company_name,main_office_city_id) values
     ('Blizzard Entertainment',1),
     ('Mojang',2),
