@@ -1,3 +1,11 @@
+create schema if not exists gosqltask1
+
+CHARACTER SET = utf8mb4
+COLLATE= utf8mb4_0900_ai_ci
+ DEFAULT ENCRYPTION = 'Y';
+ 
+use gosqltask1;
+
 drop table if exists developers;
 create table developers(
 	id int auto_increment,
