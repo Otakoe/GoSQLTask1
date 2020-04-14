@@ -37,7 +37,7 @@ create table customers(
         
 drop table if exists cities;
 create table cities(
-	id int not null,
+	id int not null auto_increment,
 	city_name varchar(45) not null,
 	primary key(id));
         
@@ -64,9 +64,3 @@ create table link_customers_projects(
 	customer_id int not null,
 	project_id int not null,
         primary key (customer_id,project_id));
-        
-drop table if exists link_companies_cities;    
-create table link_companies_cities(
-	company_id int not null,
-	city_id int not null,
-	primary key(company_id,city_id));
